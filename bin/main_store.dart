@@ -5,14 +5,16 @@ void main() {
   Book boo2 = Book(bookName: 'Dart', authorName: 'Karrar', rate: 3.8);
   Book boo3 =
       Book(bookName: "java dart", authorName: "Mohammed ALi ", rate: 3.9);
-  List<Book> storeBook = [boo1, boo2, boo3];
+  Book newone = Book(bookName: "df", authorName: "dd", rate: 4.4);
+  List<Book> storeBook = [boo1, boo2, boo3, newone];
 
   BookController bookContoller = BookController();
+  //
   bookContoller.books = storeBook;
 
   print('''
   Main menu
-  1- addBook
+  1- DispalyAllBook
   2- ratethanFour
   3- addBook
   4- updateBook
