@@ -5,7 +5,7 @@ void main() {
   Book boo2 = Book(bookName: 'Dart', authorName: 'Karrar', rate: 3.8);
   Book boo3 =
       Book(bookName: "java dart", authorName: "Mohammed ALi ", rate: 3.9);
-  Book newone = Book(bookName: "df", authorName: "dd", rate: 4.4);
+  Book newone = Book(bookName: "df AI", authorName: "dd", rate: 4.4);
   List<Book> storeBook = [boo1, boo2, boo3, newone];
 
   BookController bookContoller = BookController();
@@ -14,12 +14,12 @@ void main() {
 
   print('''
   Main menu
-  1- DispalyAllBook
-  2- ratethanFour
-  3- addBook
-  4- updateBook
-  5- deleteBook
-  6- serach
+  1- Dispaly All Book
+  2- rate > +4 
+  3- Add Book
+  4- Delete Book
+  5- Update Book
+  6- Serach
   
   ''');
   print("Write your choice:");
@@ -135,6 +135,10 @@ class BookController {
 
     listBook.removeWhere((element) => element.bookName == inputText);
     print('book has been deleted');
+
+    listBook.forEach((book) {
+      print("${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
+    });
   }
 
   void updateBook() {
@@ -177,8 +181,6 @@ class BookController {
         if (book.bookName.contains(inputText!)) {
           print(
               "${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
-        } else {
-          print("This entry is not available in books");
         }
       });
     }
