@@ -93,24 +93,24 @@ Learn Dart       Ali Ihsan           4.2
 
 ## ScreenShots
 
-Main menu
+Main menu <br />
 <img src="assets/main_menu.png" height="500em" /> 
 
-Dispaly All Book
+Dispaly All Book <br />
 <img src="assets/display_all.png" height="500em" />
 
-rate > +4 
+rate > +4  <br />
 <img src="assets/rate_more_than_fore.png" height="500em" />
 
-Add Book
+Add Book <br />
 <img src="assets/add_book.png" height="500em" />
 
-Delete Book
+Delete Book <br />
 <img src="assets/delete_book.png" height="500em" />
 
-Update Book
+Update Book <br />
 <img src="assets/update_list.png" height="500em" />
 
-Search
+Search <br />
 <img src="assets/search_book.png" height="500em" />
 
