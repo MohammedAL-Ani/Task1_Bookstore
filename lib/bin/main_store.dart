@@ -132,11 +132,13 @@ class BookController {
 
     print('Enter the book name:');
     String? inputText = stdin.readLineSync();
-
-    listBook.removeWhere((element) => element.bookName == inputText);
-    print('book has been deleted');
-
     listBook.forEach((book) {
+      print("${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
+    });
+    var listM = listBook;
+    listM.removeWhere((element) => element.bookName == inputText);
+    print('book has been deleted');
+    listM.forEach((book) {
       print("${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
     });
   }
@@ -165,12 +167,16 @@ class BookController {
               "${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
         }
       });
+      listBook.forEach((book) {
+        print(
+            "${book.bookName}\t\t\t\t${book.authorName}\t\t\t\t${book.rate}}");
+      });
     }
   }
 
   void searchBook() {
     List<Book>? listBook = books.cast<Book>();
-    print('Enter a query:');
+    print('Enter a Book Name:');
     String? inputText = stdin.readLineSync();
 
     if (listBook.isEmpty) {
